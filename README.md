@@ -1,7 +1,7 @@
 # TP DEVOPS 
 
 ## 1 Namespaces 
-Nous allons crée 2 namespace en fonction de la partit 2. Nous allons faire un namespace pour devops-303 et un pour hello-world
+Nous allons créer 2 namespaces en fonction de la partie 2. Nous allons faire un namespace pour devops-303 et un pour hello-world
 
 Ce que les deux namespaces vont contenir :
 
@@ -13,7 +13,7 @@ helloworld :
 
 redirection tcp et l'affichage du hello world 
 
-Configuration des namespace avec leurs quota
+Configuration des namespaces avec leurs quotas
 devops303
 ```apiVersion: v1
 kind: ResourceQuota
@@ -47,7 +47,7 @@ Creation de l'ingress avec un pod de nginx :
 ```bash
 kubectl apply -f ingress-nginx.yaml
 ```
-Verification que tout c'est bien crée 
+Verification que tout s'est bien créé 
 
 ```bash 
  kubectl get ingress
@@ -76,17 +76,17 @@ A partir de ce moment il nous faut le nom du pod complet pour faire un forward d
 NAME                           READY   STATUS    RESTARTS   AGE
 hello-world-7dcdb86496-ggw9n   1/1     Running   0          44m
 ```
-une fois le nom complet obtenu via la commande précédente on fais :
+Une fois le nom complet obtenu via la commande précédente on fait :
 ```bash
  kubectl port-forward pod/hello-world-7dcdb86496-v7hs7 8080:80
 ```
 Notre forward de port ce lance 
-Puis on va sur notre navigateur favoris et on tape localhost:8080
+Puis on va sur notre navigateur favori et on tape localhost:8080
 Et on va obtenir le hello-world 
 
 ## 2 ConfigMap 
 
-Pour faire le config map il nous faut la commande pour crée le configamp :
+Pour faire la config map il nous faut la commande pour crée le configamp :
 
 ```bash 
 kubectl create configmap configmap.yaml
@@ -103,13 +103,13 @@ data:
   REDIS_HOST: "service-redis-devops303"
   REDIS_PORT: "6379"
   ```
-Pour verifier si le configmap c'est bien crée nous regardons via la commande :
+Pour verifier si le configmap c'est bien créé nous regardons via la commande :
 
 ```
 kubectl get configmap
 ```
 
-Cela nous donnes 
+Cela nous donne 
 
 ```bash 
 kubectl get configmap
