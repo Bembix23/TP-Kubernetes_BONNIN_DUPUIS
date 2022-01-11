@@ -1,5 +1,3 @@
-# TP-Kubernetes_BONNIN_DUPUIS
-
 # TP DEVOPS 
 
 ## 1 Namespaces 
@@ -109,5 +107,13 @@ Pour verifier si le configmap c'est bien crée nous regardons via la commande :
 
 ```
 kubectl get configmap
+```
+
+Cela nous donnes 
+
+```bash 
+kubectl get configmap
+NAME               DATA   AGE
+configmap.yaml     0      12s
 ```
 

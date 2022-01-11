@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: configmap-devops303
+  namespace: devops303
+data:
+  REDIS_HOST: "service-redis-devops303"
+  REDIS_PORT: "6379"
